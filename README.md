@@ -1,1 +1,1 @@
-# bookstore
+# github.com/SeeJson/bookstore

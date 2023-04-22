@@ -3,9 +3,7 @@ package logic
 import (
 	"context"
 
-	"bookstore/rpc/check/internal/svc"
-	"bookstore/rpc/check/pb"
-
+	"github.com/SeeJson/bookstore/rpc/check/internal/svc"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

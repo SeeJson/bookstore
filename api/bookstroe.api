@@ -20,7 +20,7 @@ type (
 	}
 )
 
-service bookstore-api {
+service github.com/SeeJson/bookstore-api {
 	@handler AddHandler
 	get /add (addReq) returns (addResp)
 	

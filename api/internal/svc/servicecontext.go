@@ -1,9 +1,9 @@
 package svc
 
 import (
-	"bookstore/api/internal/config"
-	"bookstore/rpc/add/adder"
-	"bookstore/rpc/check/checker"
+	"github.com/SeeJson/bookstore/api/internal/config"
+	"github.com/SeeJson/bookstore/rpc/add/adder"
+	"github.com/SeeJson/bookstore/rpc/check/checker"
 	"github.com/zeromicro/go-zero/zrpc"
 )
 

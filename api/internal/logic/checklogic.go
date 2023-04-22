@@ -1,11 +1,11 @@
 package logic
 
 import (
-	"bookstore/rpc/check/checker"
 	"context"
+	"github.com/SeeJson/bookstore/rpc/check/checker"
 
-	"bookstore/api/internal/svc"
-	"bookstore/api/internal/types"
+	"github.com/SeeJson/bookstore/api/internal/svc"
+	"github.com/SeeJson/bookstore/api/internal/types"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )

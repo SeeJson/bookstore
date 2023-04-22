@@ -1,12 +1,10 @@
 package logic
 
 import (
-	"bookstore/rpc/model"
 	"context"
 
-	"bookstore/rpc/add/internal/svc"
-	"bookstore/rpc/add/pb"
-
+	"github.com/SeeJson/bookstore/rpc/add/internal/svc"
+	"github.com/SeeJson/bookstore/rpc/model"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

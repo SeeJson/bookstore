@@ -4,15 +4,15 @@ import (
 	"flag"
 	"fmt"
 
-	"bookstore/api/internal/config"
-	"bookstore/api/internal/handler"
-	"bookstore/api/internal/svc"
+	"github.com/SeeJson/bookstore/api/internal/config"
+	"github.com/SeeJson/bookstore/api/internal/handler"
+	"github.com/SeeJson/bookstore/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
 )
 
-var configFile = flag.String("f", "api/etc/bookstore-api.yaml", "the config file")
+var configFile = flag.String("f", "api/etc/github.com/SeeJson/bookstore-api.yaml", "the config file")
 
 func main() {
 	flag.Parse()

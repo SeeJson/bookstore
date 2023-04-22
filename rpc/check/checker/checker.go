@@ -6,7 +6,7 @@ package checker
 import (
 	"context"
 
-	"bookstore/rpc/check/pb"
+	"github.com/SeeJson/bookstore/rpc/check/pb"
 
 	"github.com/zeromicro/go-zero/zrpc"
 	"google.golang.org/grpc"

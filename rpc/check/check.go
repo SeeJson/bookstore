@@ -4,11 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"bookstore/rpc/check/internal/config"
-	"bookstore/rpc/check/internal/server"
-	"bookstore/rpc/check/internal/svc"
-	"bookstore/rpc/check/pb"
-
+	"github.com/SeeJson/bookstore/rpc/check/internal/config"
+	"github.com/SeeJson/bookstore/rpc/check/internal/server"
+	"github.com/SeeJson/bookstore/rpc/check/internal/svc"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"

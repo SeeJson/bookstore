@@ -1,4 +1,4 @@
-module bookstore
+module github.com/SeeJson/bookstore
 
 go 1.20
 

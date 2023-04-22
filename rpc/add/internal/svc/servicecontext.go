@@ -1,8 +1,8 @@
 package svc
 
 import (
-	"bookstore/rpc/add/internal/config"
-	"bookstore/rpc/model"
+	"github.com/SeeJson/bookstore/rpc/add/internal/config"
+	"github.com/SeeJson/bookstore/rpc/model"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 )
 
