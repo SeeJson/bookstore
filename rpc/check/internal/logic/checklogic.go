@@ -2,6 +2,7 @@ package logic
 
 import (
 	"context"
+	pb "github.com/SeeJson/bookstore/rpc/check/pb"
 
 	"github.com/SeeJson/bookstore/rpc/check/internal/svc"
 	"github.com/zeromicro/go-zero/core/logx"
@@ -21,14 +22,14 @@ func NewCheckLogic(ctx context.Context, svcCtx *svc.ServiceContext) *CheckLogic 
 	}
 }
 
-func (l *CheckLogic) Check(in *__.CheckReq) (*__.CheckResp, error) {
+func (l *CheckLogic) Check(in *pb.CheckReq) (*pb.CheckResp, error) {
 	// todo: add your logic here and delete this line
 	resp, err := l.svcCtx.Model.FindOne(l.ctx, in.Book)
 	if err != nil {
 		return nil, err
 	}
 
-	return &__.CheckResp{
+	return &pb.CheckResp{
 		Found: true,
 		Price: resp.Price,
 	}, nil

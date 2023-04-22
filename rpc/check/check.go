@@ -7,6 +7,7 @@ import (
 	"github.com/SeeJson/bookstore/rpc/check/internal/config"
 	"github.com/SeeJson/bookstore/rpc/check/internal/server"
 	"github.com/SeeJson/bookstore/rpc/check/internal/svc"
+	pb "github.com/SeeJson/bookstore/rpc/check/pb"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
@@ -24,7 +25,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
-		__.RegisterCheckerServer(grpcServer, server.NewCheckerServer(ctx))
+		pb.RegisterCheckerServer(grpcServer, server.NewCheckerServer(ctx))
 
 		if c.Mode == service.DevMode || c.Mode == service.TestMode {
 			reflection.Register(grpcServer)

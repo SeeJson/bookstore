@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	pb "github.com/SeeJson/bookstore/rpc/add/pb"
 
 	"github.com/SeeJson/bookstore/rpc/add/internal/config"
 	"github.com/SeeJson/bookstore/rpc/add/internal/server"
@@ -24,7 +25,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 
 	s := zrpc.MustNewServer(c.RpcServerConf, func(grpcServer *grpc.Server) {
-		__.RegisterAdderServer(grpcServer, server.NewAdderServer(ctx))
+		pb.RegisterAdderServer(grpcServer, server.NewAdderServer(ctx))
 
 		if c.Mode == service.DevMode || c.Mode == service.TestMode {
 			reflection.Register(grpcServer)

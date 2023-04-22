@@ -4,6 +4,7 @@ import (
 	"context"
 
 	"github.com/SeeJson/bookstore/rpc/add/internal/svc"
+	pb "github.com/SeeJson/bookstore/rpc/add/pb"
 	"github.com/SeeJson/bookstore/rpc/model"
 	"github.com/zeromicro/go-zero/core/logx"
 )
@@ -22,7 +23,7 @@ func NewAddLogic(ctx context.Context, svcCtx *svc.ServiceContext) *AddLogic {
 	}
 }
 
-func (l *AddLogic) Add(in *__.AddReq) (*__.AddResp, error) {
+func (l *AddLogic) Add(in *pb.AddReq) (*pb.AddResp, error) {
 	// todo: add your logic here and delete this line
 	_, err := l.svcCtx.Modele.Insert(l.ctx, &model.Book{
 		Book:  in.Book,
@@ -31,7 +32,7 @@ func (l *AddLogic) Add(in *__.AddReq) (*__.AddResp, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &__.AddResp{
+	return &pb.AddResp{
 		Ok: true,
 	}, nil
 }
